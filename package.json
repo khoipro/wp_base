@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/solislab.minhkhoinguyen/wp_base.git"
+    "url": "git@github.com:khoipro/wp_base.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/solislab.minhkhoinguyen/wp_base/issues"
+    "url": "https://github.com/khoipro/wp_base/issues"
   },
-  "homepage": "https://gitlab.com/solislab.minhkhoinguyen/wp_base#README",
+  "homepage": "https://github.com/khoipro/wp_base/blob/master/README.md",
   "dependencies": {
     "jquery": "^3.2.1"
   }
