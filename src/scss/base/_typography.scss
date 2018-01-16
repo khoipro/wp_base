@@ -1,0 +1,52 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  font-family: $f-sans;
+  line-height: (17/13);
+  color: $c-biscay;
+  letter-spacing: 0;
+}
+
+.heading-large {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.heading-medium {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.heading-small {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.heading-label {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-heading-small {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.link {
+  font-size: 13px;
+  line-height: 17px;
+}

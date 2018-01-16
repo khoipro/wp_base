@@ -1,0 +1,30 @@
+{
+  "name": "wp_base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/solislab.minhkhoinguyen/wp_base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/solislab.minhkhoinguyen/wp_base/issues"
+  },
+  "homepage": "https://gitlab.com/solislab.minhkhoinguyen/wp_base#README",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
