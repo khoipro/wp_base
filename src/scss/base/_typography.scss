@@ -3,50 +3,43 @@ html {
 }
 
 body {
+  @include font-size(13, 17);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 13px;
   font-family: $f-sans;
-  line-height: (17/13);
+  font-weight: 400;
   color: $c-biscay;
   letter-spacing: 0;
 }
 
 .heading-large {
-  font-size: 28px;
-  line-height: 36px;
+  @include font-size(28, 36);
 }
 
 .heading-medium {
-  font-size: 20px;
-  line-height: 26px;
+  @include font-size(20, 26);
 }
 
 .heading-small {
-  font-size: 16px;
-  line-height: 21px;
+  @include font-size(16, 21);
 }
 
 .heading-label {
-  font-size: 12px;
-  line-height: 15px;
+  @include font-size(12, 15);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .page-heading-small {
-  font-size: 12px;
-  line-height: 12px;
+  @include font-size(12, 12);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .small {
-  font-size: 12px;
-  line-height: 15px;
+  @include font-size(12, 15);
 }
 
 .link {
-  font-size: 13px;
-  line-height: 17px;
+  @include font-size(13, 17);
 }

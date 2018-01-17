@@ -1,0 +1,34 @@
+%button {
+  @extend .link;
+  @extend .transition-all;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.button {
+  @extend %button;
+  background: $c-blue;
+  color: $c-white;
+  &:hover {
+	background: darken($c-blue, 5%);
+  }
+}
+
+.button-red {
+  @extend .button;
+  background: $c-red;
+  &:hover {
+	background: darken($c-red, 5%);
+  }
+}
+
+.button-outline {
+  @extend %button;
+  background: none;
+  color: $c-blue;
+  border: 1px solid $c-geyser;
+  &:hover {
+	box-shadow: 0 0 0 3px rgba($c-blue, 0.5);
+  }
+}

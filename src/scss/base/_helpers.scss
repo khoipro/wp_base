@@ -1,0 +1,65 @@
+/*
+Extending classes
+ */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transition-all {
+  transition: all .25s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+Mixins
+ */
+
+@mixin breakpoint($breakpoint: $break-xs, $mobile-first: true) {
+  @if( $mobile-first == true ) {
+	@media (min-width: #{$breakpoint}px) {
+	  @content;
+	}
+  } @else {
+	@media (max-width: #{$breakpoint - 1}px) {
+	  @content;
+	}
+  }
+}
+
+@mixin font-size($font-size: 13, $line-height: 17) {
+  font-size: #{$font-size/16}rem;
+  line-height: #{$line-height/$font-size};
+}
+
+@mixin ratio($width: 16, $height: 9) {
+  position: relative;
+  &:before {
+	content: '';
+	display: block;
+	padding-top: #{percentage($height / $width)};
+  }
+}

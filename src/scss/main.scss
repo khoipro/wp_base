@@ -1,9 +1,29 @@
+/**
+Reset
+ */
 @import 'base/normalize';
 @import 'base/reset';
+
+/**
+Variables
+ */
 @import 'base/variables';
+
+/**
+Helpers
+ */
 @import 'base/helpers';
 
+/**
+Base
+ */
+@import 'base/layout';
 @import 'base/typography';
+@import 'base/buttons';
 
+/**
+Modules
+ */
 @import 'modules/header';
 @import 'modules/footer';
+@import 'modules/hero-homepage';

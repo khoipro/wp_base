@@ -1,5 +1,5 @@
 /**
-General Colors
+General Colors from SalesForce Design Patterns
  */
 
 $c-deep-cover: #061C3F;
@@ -16,6 +16,7 @@ $c-flush-mahogany: #C23934;
 $c-koromiko: #FFB75D;
 $c-link-water: #F4F6F9;
 $c-white: #FFFFFF;
+$c-black: #000;
 $c-salem: #04844B;
 $c-emerald: #4BCA81;
 
@@ -29,10 +30,21 @@ $c-blue: $c-azure;
 $c-dblue: $c-blue-midnight;
 $c-dark: $c-deep-cover;
 $c-gray: $c-blue-cadet;
-$c-light: $c-kasmir;
+$c-light: $c-link-water;
 
 /**
 Font family
  */
 
 $f-sans: 'Salesforce Sans', Arial, Helvetica, sans-serif;
+
+/**
+Breakpoints
+ */
+
+$break-xs: 480;
+$break-s: 600;
+$break-sm: 768;
+$break-m: 1024;
+$break-md: 1280;
+$break-lg: 1440;
