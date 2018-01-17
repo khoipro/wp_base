@@ -5,6 +5,7 @@ var plumber = require('gulp-plumber');
 var uglifiy = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var browserify = require('gulp-browserify');
+var livereload = require('gulp-livereload');
 
 var cssDest = 'assets/css/',
 	jsDest = 'assets/js/';
@@ -21,7 +22,8 @@ gulp.task('styles', function(){
 		.pipe(sourcemaps.write())
 		.pipe(plumber.stop())
 		.pipe(autoprefixer(autoprefixerOptions))
-		.pipe(gulp.dest(cssDest));
+		.pipe(gulp.dest(cssDest))
+		.pipe(livereload());
 });
 
 gulp.task('scripts', function() {
@@ -32,6 +34,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch',function() {
+	livereload.listen();
 	gulp.watch('src/scss/**/*.scss',['styles']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 });

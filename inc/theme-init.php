@@ -4,6 +4,7 @@ function cares_setup() {
 	$text_domain = 'wp_base';
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-logo' );
 	add_theme_support( 'html5', array(
 		'comment-form',
 		'comment-list',
