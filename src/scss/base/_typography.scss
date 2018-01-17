@@ -3,43 +3,57 @@ html {
 }
 
 body {
-  @include font-size(13, 17);
+  @include font-size(13, 20);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $f-sans;
   font-weight: 400;
-  color: $c-biscay;
-  letter-spacing: 0;
 }
 
-.heading-large {
-  @include font-size(28, 36);
+/**
+Heading
+ */
+
+.h1 {
+  @include font-size(38, 45);
 }
 
-.heading-medium {
-  @include font-size(20, 26);
+.h2 {
+  @include font-size(32, 38);
 }
 
-.heading-small {
-  @include font-size(16, 21);
+.h3 {
+  @include font-size(18, 21);
+  font-weight: 700;
 }
 
-.heading-label {
-  @include font-size(12, 15);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.lead {
+  @include font-size(18, 34);
 }
 
-.page-heading-small {
-  @include font-size(12, 12);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/**
+Button
+ */
+
+%button-text {
+  @include font-size(14, 22);
+  font-weight: 700;
 }
 
-.small {
-  @include font-size(12, 15);
+/**
+Footer
+ */
+
+.footer-widget-title {
+  @include font-size(15, 18);
+  font-weight: 500;
 }
 
-.link {
-  @include font-size(13, 17);
+.footer-link {
+  @include font-size(13, 24);
+}
+
+.header-menu-text,
+.footer-copyright-text {
+  @include font-size(14, 17);
 }

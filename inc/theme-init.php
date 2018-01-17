@@ -1,5 +1,29 @@
 <?php
 
+/**
+ * Add required activate plugin ACF
+ */
+
+function cares_required_module() {
+	if( !function_exists('the_field') ) {
+		function load_acf_required_message() { ?>
+			<div class="notice notice-warning is-dismissible">
+				<p><?php _e( 'This theme needs Advanced Custom Fields to work.', 'cares' ); ?></p>
+			</div>
+		<?php }
+		add_action('admin_notices', 'load_acf_required_message');
+		add_action('wp_footer', 'load_acf_required_message');
+	}
+}
+
+add_action('after_setup_theme', 'cares_required_module');
+
+/**
+ * Add notice error when ACF is not activate
+ */
+
+
+
 function cares_setup() {
 	$text_domain = 'wp_base';
 	add_theme_support( 'title-tag' );

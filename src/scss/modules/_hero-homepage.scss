@@ -1,38 +1,45 @@
-.hero-homepage {
-  border-bottom: 1px solid $c-light;
-}
-
 .hero-homepage__wrapper {
   @extend .flex-wrap;
   position: relative;
   align-items: center;
   overflow: hidden;
+  @include breakpoint($break-m) {
+	justify-content: flex-end;
+  }
 }
 
 .hero-homepage__inner {
   width: 100%;
-  @include breakpoint($break-m) {
-	max-width: 75%;
-	padding-left: 10%;
-  }
 }
 
 .hero-homepage__figure {
   @include ratio(16, 9);
+  @extend .bg-contain;
   @include breakpoint($break-m) {
-	width: 50%;
+	width: 60%;
   }
 }
 
 .hero-homepage__block {
   @include breakpoint($break-m) {
-	width: 50%;
+	width: 100%;
+	max-width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
   }
 }
 
 .hero-homepage__title {
-  @extend .heading-large;
+  @extend .h1;
   margin-bottom: 20px;
+  color: $c-blue;
+}
+
+.hero-homepage__description {
+  @extend .lead;
+  color: $c-primary;
 }
 
 .hero-homepage__footer {
