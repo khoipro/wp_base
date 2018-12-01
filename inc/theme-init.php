@@ -4,7 +4,7 @@
  * Add required activate plugin ACF
  */
 
-function cares_required_module() {
+function wpbase_required_module() {
 	if( !function_exists('the_field') ) {
 		function load_acf_required_message() { ?>
 			<div class="notice notice-warning is-dismissible">
@@ -16,7 +16,7 @@ function cares_required_module() {
 	}
 }
 
-add_action('after_setup_theme', 'cares_required_module');
+add_action('after_setup_theme', 'wpbase_required_module');
 
 /**
  * Add notice error when ACF is not activate
@@ -24,7 +24,7 @@ add_action('after_setup_theme', 'cares_required_module');
 
 
 
-function cares_setup() {
+function wpbase_setup() {
 	$text_domain = 'wp_base';
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -42,11 +42,11 @@ function cares_setup() {
 	) );
 }
 
-add_action( 'after_setup_theme', 'cares_setup' );
+add_action( 'after_setup_theme', 'wpbase_setup' );
 
-function cares_scripts() {
+function wpbase_scripts() {
 	wp_enqueue_style( 'main-style', get_theme_file_uri( '/assets/css/main.css' ), array(), '1.0' );
 	wp_enqueue_script( 'main-scripts', get_theme_file_uri( '/assets/js/main.js' ), array(), '1.0.0', true );
 }
 
-add_action( 'wp_enqueue_scripts', 'cares_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpbase_scripts' );
