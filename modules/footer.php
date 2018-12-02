@@ -1,7 +1,10 @@
+<?php
+$footer_copyright_text = get_theme_mod('footer_copyright_text_setting');
+?>
 <footer class="footer">
 	<div class="container">
 		<div class="footer__row">
-			<p class="copyright"><?php _e('Copyright ' . get_the_date('Y') . ' by ' . get_bloginfo('name') . '. All right reserved.', 'wp_base'); ?></p>
+			<p class="footer__copyright js-footer-copyright-text"><?php echo $footer_copyright_text; ?></p>
 		</div>
 		<?php if( has_nav_menu('social') ) :
 			wp_nav_menu(array(

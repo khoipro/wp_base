@@ -27,7 +27,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function() {
-	gulp.src('src/js/main.js')
+	gulp.src('src/js/*.js')
 		.pipe(browserify())
 		.pipe(uglifiy())
 		.pipe(gulp.dest(jsDest));
@@ -39,4 +39,5 @@ gulp.task('watch',function() {
 	gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
+gulp.task('build', ['styles', 'scripts']);
 gulp.task('default', ['styles', 'scripts', 'watch']);
