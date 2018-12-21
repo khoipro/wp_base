@@ -1,16 +1,17 @@
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var sourcemaps = require('gulp-sourcemaps')
-var plumber = require('gulp-plumber')
-var uglifiy = require('gulp-uglify')
-var autoprefixer = require('gulp-autoprefixer')
-var browserify = require('gulp-browserify')
-var livereload = require('gulp-livereload')
-var standard = require('gulp-standard')
-var cssDest = 'assets/css/',
-  jsDest = 'assets/js/'
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const plumber = require('gulp-plumber')
+const uglifiy = require('gulp-uglify')
+const autoprefixer = require('gulp-autoprefixer')
+const browserify = require('gulp-browserify')
+const livereload = require('gulp-livereload')
+const standard = require('gulp-standard')
+const babel = require('gulp-babel')
+const cssDest = 'assets/css/'
+const jsDest = 'assets/js/'
 
-var autoprefixerOptions = {
+const autoprefixerOptions = {
   browsers: ['last 3 versions', '> 5%', 'Firefox ESR']
 }
 
@@ -34,7 +35,9 @@ gulp.task('scripts', function () {
       breakOnError: true,
       quiet: true
     }))
+    .pipe(babel())
     .pipe(plumber())
+    .pipe(sourcemaps.write())
     .pipe(browserify())
     .pipe(uglifiy())
     .pipe(gulp.dest(jsDest))
