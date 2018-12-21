@@ -2,40 +2,30 @@
 /**
  * Hero in Frontpage Landing
  */
-$image_url = '';
-$image = get_field('hero_right_image');
-if( !empty($image) ) {
-	$image_url = $image['url'];
-}
-$title = get_field('hero_headline');
-$description = get_field('hero_description');
+$image = get_header_image_tag();
+$headline = get_theme_mod('hero_homepage_headline_setting');
+$description = get_theme_mod('hero_homepage_description_setting');
 // First CTA Button Text
 $first_button_text = get_field('hero_first_button_text');
 $first_button_link = get_field('hero_first_button_link');
-if( !empty($image_url) || !empty($title) || !empty($description) ) :
 ?>
-	<section class="hero-homepage">
-		<div class="hero-homepage__wrapper">
-			<div class="hero-homepage__block">
-				<div class="container">
-					<div class="hero-homepage__inner">
-						<?php if( !empty($title) ) : ?>
-							<h1 class="hero-homepage__title"><?php echo $title; ?></h1>
-						<?php endif; ?>
-						<?php if( !empty($description) ) : ?>
-							<div class="hero-homepage__description"><?php echo $description; ?></div>
-						<?php endif; ?>
-						<?php if( !empty($first_button_text) && !empty($first_button_link) ) : ?>
-							<footer class="hero-homepage__footer">
-								<a class="button-red hero-homepage__button" href="<?php echo $first_button_link; ?>"><?php echo $first_button_text; ?></a>
-							</footer>
-						<?php endif; ?>
-					</div>
+<section class="hero-homepage">
+	<div class="hero-homepage__wrapper">
+		<div class="hero-homepage__block">
+			<div class="container">
+				<div class="hero-homepage__inner">
+					<h1 class="hero-homepage__title js-hero-headline"><?php echo $headline; ?></h1>
+					<div class="hero-homepage__description js-hero-description"><?php echo $description; ?></div>
+					<?php if( !empty($first_button_text) && !empty($first_button_link) ) : ?>
+						<footer class="hero-homepage__footer">
+							<a class="button-red hero-homepage__button" href="<?php echo $first_button_link; ?>"><?php echo $first_button_text; ?></a>
+						</footer>
+					<?php endif; ?>
 				</div>
 			</div>
-			<?php if( !empty($image_url) ) : ?>
-				<figure class="hero-homepage__figure" style="background-image: url('<?php echo $image_url; ?>');"></figure>
-			<?php endif; ?>
 		</div>
-	</section>
-<?php endif; ?>
+		<?php if( !empty($image) ) :
+			echo $image;
+		endif; ?>
+	</div>
+</section>
