@@ -8,15 +8,24 @@
  */
 class wpbase_Customizer {
 	public static function register ( $wp_customize ) {
+		/**
+		 * Global Modules
+		 */
 		$wp_customize->add_panel('global-modules', array(
 			'title' => __('Global Modules', 'wpbase'),
 			'priority' => 30
 		));
+		/**
+		 * Module: Footer
+		 */
 		$wp_customize->add_section('footer', array(
 			'title' => __('Footer', 'wpbase'),
 			'panel' => 'global-modules',
 			'priority' => 100
 		));
+		/**
+		 * Footer: Copyright Text
+		 */
 		$wp_customize->add_setting( 'footer_copyright_text_setting',
 			array(
 				'default' => __('Copyright &copy; %s by %s', date('Y'), get_bloginfo('name')),
@@ -30,17 +39,12 @@ class wpbase_Customizer {
 				'section' => 'footer',
 				'settings' => 'footer_copyright_text_setting',
 				'priority' => 10,
-				'type' => 'textarea',
-				'input_attrs' => array( // Optional.
-					'placeholder' => __( 'Enter your copyright text here', 'wpbase' ),
-				),
+				'type' => 'textarea'
 			)
 		);
 	}
 
-	public static function header_output() {
-
-	}
+	public static function header_output() {}
 
 	public static function live_preview() {
 		wp_enqueue_script(
