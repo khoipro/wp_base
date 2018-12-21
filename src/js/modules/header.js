@@ -1,7 +1,5 @@
-function Header(el) {
-	var t = this;
-	t.$el = $(el);
-	console.log(el);
+function Header (el) {
+  console.log(el)
 }
 
-module.exports = Header;
+module.exports = Header
